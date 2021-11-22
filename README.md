@@ -44,3 +44,8 @@ Exercice : démarer un conteneur à partir de l'image ubuntu et puis installer j
 
 Si on veut installer par exemple Java, on procède de la façon suivante : on met d'abord à jour ``apt-get update``et puis ``apt-get install java``. Si on veut utiliser vim comme éditeur `` apt-get install vim``.  
   
+  
+Pour inspecter un contenur et avoir des détails sous forme d'un ficheir json ``docker inspect id_conteneur`` 
+
+Pour avoir les logs d'un contenur : ``docker logs id_conteneur`` 
+  
