@@ -76,7 +76,7 @@ Pour faire "mapping volume"
 
 ``docker run -dti -p 8080:80 -v /Users/syoucef/Desktop/dockerexample/mapage/:/usr/share/nginx/html/ --name myserverweeb nginx``
 
-``docker run -tid --name webvolume -p 9698 --mount source=monvolume,target=/usr/share/nginx/html/ nginx`` 
+``docker run -tid --name webvolumebis -p 8691:80 --mount source=mesdonnees,target=/usr/share/nginx/html/ nginx`` 
 
 
 Pour accéder aux volumes (sous mac) : 
