@@ -20,6 +20,8 @@ Pour donner un nom précis à votre conteneur, on utilise --name. Exemple : ``do
 
 Pour arrêtre un conteneur ``docker stop identifiant_conteneur``. Pour supprimer un conteneur, on doit d'abord l'arrêter : ``docker rm identifiant_conteneur``. 
 
+Pour lister toutes vos images ``docker images``
+
 
 
  
