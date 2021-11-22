@@ -70,3 +70,6 @@ Commands:
 ``/usr/share/nginx/htm ``  
 
 
+Pour faire "mapping volume" ``docker run -dti -p 8080:80 -v /Users/syoucef/Desktop/dockerexample/mapage/:/usr/share/nginx/html/ --name myserverweeb nginx``
+
+
