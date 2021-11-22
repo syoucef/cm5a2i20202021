@@ -179,6 +179,14 @@ EXPOSE 80
 ``docker run -d -p 9090:8080 syoucef/springcm19novembre``
  
  
- Publer une image sur DockerHub :
+ Publier une image sur DockerHub :
+ 
+ 1. Créer son image, soit ``josephadd``
+ 2. Créer un dépôt dockerHub ``syoucef/joseph``
+ 3. Se connecter à DockerHub via ligne de commande : ``docker login`` (facultatif si on utilise docker desktop)
+ 4. Créer un lien entre l'image ``josephadd``et ``syoucef/joseph`` : ``docker tag josephadd syoucef/joseph``
+ 5. Envoer l'image vers Dockerhub ``docker push syoucef/joseph``
+
+ 
  
  
