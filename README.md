@@ -185,7 +185,7 @@ EXPOSE 80
  2. Créer un dépôt dockerHub ``syoucef/joseph``
  3. Se connecter à DockerHub via ligne de commande : ``docker login`` (facultatif si on utilise docker desktop)
  4. Créer un lien entre l'image ``josephadd``et ``syoucef/joseph`` : ``docker tag josephadd syoucef/joseph``
- 5. Envoer l'image vers Dockerhub ``docker push syoucef/joseph``
+ 5. Envoyer l'image vers Dockerhub ``docker push syoucef/joseph``
 
  
 Pour chercher une image par ligne de commande ``docker serach nom_image``
