@@ -91,6 +91,6 @@ La soslution ici : https://stackoverflow.com/questions/38532483/where-is-var-lib
 
 Gestion des variables d'environnement : 
 
-``docker run -tid --name variableenvironnement --env MAVARIABLE="samir1234" ubuntu:latest 
+``docker run -tid --name variableenvironnement --env MAVARIABLE="samir1234" ubuntu:latest ``
 
-
+ 
