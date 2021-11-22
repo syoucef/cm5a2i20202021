@@ -136,6 +136,5 @@ Gestion des variables d'environnement :
   COPY Application.class Application.class
   CMD ["java", "Application"]
   ```java
-
-Exercice : Lucas et Florian avec Node et les autres avec Python 
  
+ Exercice : Lucas et Florian avec Node et les autres avec Python 
