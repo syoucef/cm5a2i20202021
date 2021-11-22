@@ -138,3 +138,18 @@ Gestion des variables d'environnement :
   ```
  
  Exercice : Lucas et Florian avec Node et les autres avec Python 
+ 
+
+ 
+ Exercice : Lucas et Florian avec Node et les autres avec Python 
+ 
+ 
+ ```dockerfile
+ FROM ubuntu
+COPY test.py test.py
+RUN apt-get update
+RUN apt-get install python -y
+CMD ["python", "test.py"]
+ ```
+ 
+ Exercice : Lucas et Florian avec Node et les autres avec Python 
