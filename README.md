@@ -53,6 +53,7 @@ Pour redémarrer un conteneur : ``docker start id_conteneur``
 
 Exercice : démarrer un conteneur nginx et changer le contenu du fichier index.html. 
 
+La page index.html est par défaut dans le répertoire ``/usr/share/nginx/htm ``  
 
 Notion de volume :
 
@@ -67,9 +68,12 @@ Commands:
   prune       Remove all unused local volumes
   rm          Remove one or more volumes
 ```
-``/usr/share/nginx/htm ``  
 
 
-Pour faire "mapping volume" ``docker run -dti -p 8080:80 -v /Users/syoucef/Desktop/dockerexample/mapage/:/usr/share/nginx/html/ --name myserverweeb nginx``
+
+Pour faire "mapping volume" 
+
+
+``docker run -dti -p 8080:80 -v /Users/syoucef/Desktop/dockerexample/mapage/:/usr/share/nginx/html/ --name myserverweeb nginx``
 
 
