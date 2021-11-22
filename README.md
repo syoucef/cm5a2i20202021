@@ -48,4 +48,6 @@ Si on veut installer par exemple Java, on procède de la façon suivante : on me
 Pour inspecter un contenur et avoir des détails sous forme d'un ficheir json ``docker inspect id_conteneur`` 
 
 Pour avoir les logs d'un contenur : ``docker logs id_conteneur`` 
+
+Exercice : démarrer un conteneur nginx et changer le contenu du fichier index.html. 
   
