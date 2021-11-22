@@ -188,5 +188,7 @@ EXPOSE 80
  5. Envoer l'image vers Dockerhub ``docker push syoucef/joseph``
 
  
+Pour chercher une image par ligne de commande ``docker serach nom_image``
+
  
  
