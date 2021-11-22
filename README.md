@@ -39,6 +39,7 @@ Exercice : démarer un conteneur à partir de l'image ubuntu et puis installer j
  
  
  ``docker run -it ubuntu bash``  
-
+ 
+ Une fois à l'intérieur du conteneur, vous pouvez  installer les outils dont vous avez besoin comme vous avez l'habitube de le faire en utilisant ubuntu. 
 
   
