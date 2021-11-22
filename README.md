@@ -49,6 +49,8 @@ Pour inspecter un contenur et avoir des détails sous forme d'un ficheir json ``
 
 Pour avoir les logs d'un contenur : ``docker logs id_conteneur`` 
 
+Pour redémarrer un conteneur : ``docker start id_conteneur`` 
+
 Exercice : démarrer un conteneur nginx et changer le contenu du fichier index.html. 
 
 
