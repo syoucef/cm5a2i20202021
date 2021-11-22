@@ -13,5 +13,7 @@ docker ps : permet de lister tous les conteneurs qui sont en cours d'exécution.
 
 docker ps -a : permet de lister tous les onteneur aver leurs statuts (Up, Exited Created) 
 
+Exécuter une image du serveur nginx : ``docker run -d -p 9999:80 nginx
+
 
 
