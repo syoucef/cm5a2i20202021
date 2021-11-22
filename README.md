@@ -174,3 +174,8 @@ FROM nginx
 COPY index.html /usr/share/nginx/html
 EXPOSE 80
 ```
+
+
+``docker run -d -p 9090:8080 syoucef/springcm19novembre/bonjour``
+ 
+ 
