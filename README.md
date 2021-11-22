@@ -110,9 +110,16 @@ Gestion des variables d'environnement :
  Exemple : partir d'une image ubuntu, installer python et vim et ajouter queqlues variables d'environnemnetsauvegardées dans un fichier. 
  
  a. On commence par créer un fichier env.lst (on définit autant de variables souhaitées)
+ 
  b. Pour ajouter ces variables d'environnement `` docker run --name monconteneurvariables -tdi --env-file env.lst ubuntu``
+ 
  c. Pour installer python et vim, on rentre à l'intérieur du conteneur `` docker exec -ti monconteneurvariables sh``
  
+ Pour installer python et vim : ``apt-get update``, '' apt-get install python`` et  `àpt-get install vim``
+ 
+ d. On quite le conteneur ``exit``
+ 
+ e. Pour créer une image à partir de ce conteneur `` docker commit -m "créeation d'une image ubuntu augumentée" id_conteur nom_notre_image``
 
 
 
