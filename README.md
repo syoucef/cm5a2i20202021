@@ -93,4 +93,7 @@ Gestion des variables d'environnement :
 
 ``docker run -tid --name variableenvironnement --env MAVARIABLE="samir1234" ubuntu:latest ``
 
+ Passer une variable d'environnemnt en ligne de commande : ``docker exec -ti variableenvironnement sh``
+ 
+ 
  
