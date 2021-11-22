@@ -103,4 +103,13 @@ Gestion des variables d'environnement :
  
  
  
+ Définir sa propre image Docker :
+ 
+ 1. docker commit 
+
+
+
+ 2. Dockerfile 
+
+
  
