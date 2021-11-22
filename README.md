@@ -23,5 +23,8 @@ Pour arrêtre un conteneur ``docker stop identifiant_conteneur``. Pour supprimer
 Pour lister toutes vos images ``docker images``
 
 
+Pour forcer la suppression d'une image ou d'un conteneur : ``docker rmi -f nom_image``
+
+
 
  
