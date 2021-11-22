@@ -32,6 +32,8 @@ Exemple : notre objectif est de démarrer un conteneur MySQL et d'exécuter le c
 
 Solution : ``docker run --name monserveur -e MYSQL_ROOT_PASSWORD=root -d mysql``
 
+Pour lancer mysql : docker exec -ti monserveur mysql --password ``
+
 
 
 
