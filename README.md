@@ -65,4 +65,6 @@ Commands:
   prune       Remove all unused local volumes
   rm          Remove one or more volumes
 ```
-  
+``/usr/share/nginx/htm ``  
+
+
