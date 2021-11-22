@@ -42,4 +42,5 @@ Exercice : démarer un conteneur à partir de l'image ubuntu et puis installer j
  
  Une fois à l'intérieur du conteneur, vous pouvez  installer les outils dont vous avez besoin comme vous avez l'habitube de le faire en utilisant ubuntu. 
 
+Si on veut installer par exemple Java, on procède de la façon suivante : on met d'abord à jour ``apt-get update``et puis ``apt-get install java``. Si on veut utiliser vim comme éditeur `` apt-get install vim``.  
   
