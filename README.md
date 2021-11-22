@@ -89,8 +89,6 @@ Une fois à l'intéreiur du conteneur, les volumes se trouvent dans le dossier :
 La soslution ici : https://stackoverflow.com/questions/38532483/where-is-var-lib-docker-on-mac-os-x
 
 
-Récapitulatif : 
+Gestion des variables d'environnement : 
 
-1.  docker volume create mesdonnees
-2.  
 
