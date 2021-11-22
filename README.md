@@ -79,3 +79,10 @@ Pour faire "mapping volume"
 ``docker run -tid --name webvolume -p 9698 --mount source=monvolume,target=/usr/share/nginx/html/ nginx`` 
 
 
+Pour accéder aux volumes (sous mac) : 
+
+``docker run -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh 
+
+Une fois à l'intéreiur du conteneur, les volumes se trouvent dans le dossier :  ``/var/lib/docker/volumes/``
+
+
