@@ -179,3 +179,6 @@ EXPOSE 80
 ``docker run -d -p 9090:8080 syoucef/springcm19novembre``
  
  
+ Publer une image sur DockerHub :
+ 
+ 
