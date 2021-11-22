@@ -135,6 +135,6 @@ Gestion des variables d'environnement :
   FROM openjdk
   COPY Application.class Application.class
   CMD ["java", "Application"]
-  ```java
+  ```
  
  Exercice : Lucas et Florian avec Node et les autres avec Python 
