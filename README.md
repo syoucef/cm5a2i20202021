@@ -153,3 +153,16 @@ CMD ["python", "test.py"]
  ```
  
  Exercice : Lucas et Florian avec Node et les autres avec Python 
+ 
+ 
+ FROM : permet de définir l'image source 
+ 
+ CMD : la commande par défautt lors de l'exécution du conteneur 
+ 
+ EXPOSE : permet de définir le port d'écoute par défaut 
+ 
+ RUN : permet d'exécuter des commandes à l'intérieur du conteneur 
+ 
+ ? ADD : permet d'ajouter des fichier dans le conteneur 
+ 
+ VOLUME : permet de définir les volumes utilisables
