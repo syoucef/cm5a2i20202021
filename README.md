@@ -81,7 +81,7 @@ Pour faire "mapping volume"
 
 Pour accéder aux volumes (sous mac) : 
 
-``docker run -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh 
+`` docker run -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh ``
 
 Une fois à l'intéreiur du conteneur, les volumes se trouvent dans le dossier :  ``/var/lib/docker/volumes/``
 
