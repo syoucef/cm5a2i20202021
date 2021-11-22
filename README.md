@@ -125,5 +125,17 @@ Gestion des variables d'environnement :
 
  2. Dockerfile 
 
+ a. Créer un fichier ``Dockerfile``
+ b. On part d'une image existente (la plus petite est alpine), copier éventuellemnet un programme et l'exécuter ....
+  
+  Exemple
+  
+  
+  ```java 
+  FROM openjdk
+  COPY Application.class Application.class
+  CMD ["java", "Application"]
+  ```java
+
 
  
