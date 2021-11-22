@@ -137,5 +137,5 @@ Gestion des variables d'environnement :
   CMD ["java", "Application"]
   ```java
 
-
+Exercice : Lucas et Florian avec Node et les autres avec Python 
  
