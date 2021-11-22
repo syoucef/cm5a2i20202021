@@ -106,6 +106,12 @@ Gestion des variables d'environnement :
  Définir sa propre image Docker :
  
  1. docker commit 
+ 
+ Exemple : partir d'une image ubuntu, installer python et vim et ajouter queqlues variables d'environnemnetsauvegardées dans un fichier. 
+ 
+ a. On commence par créer un fichier env.lst (on définit autant de variables souhaitées)
+ b. Pour ajouter ces variables d'environnement `` docker run -tdi --env-file env.lst ubuntu``
+ 
 
 
 
