@@ -166,3 +166,11 @@ CMD ["python", "test.py"]
  ? ADD : permet d'ajouter des fichier dans le conteneur 
  
  VOLUME : permet de définir les volumes utilisables
+
+
+
+```dockerfile 
+FROM nginx
+COPY index.html /usr/share/nginx/html
+EXPOSE 80
+```
