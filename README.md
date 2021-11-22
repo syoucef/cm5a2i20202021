@@ -96,4 +96,11 @@ Gestion des variables d'environnement :
  Passer une variable d'environnemnt en ligne de commande : ``docker exec -ti variableenvironnement sh``
  
  
+ On peut asussi passer un ensemble de variables d'environnement sauvegardé dans un fichier : 
+ 
+ 
+ ``docker run -tid --name fichiervariableenvironnement --env-file mesvariables.lst  ubuntu:latest ``
+ 
+ 
+ 
  
