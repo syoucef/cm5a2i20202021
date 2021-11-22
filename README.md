@@ -37,6 +37,8 @@ Pour lancer mysql : ``docker exec -ti monserveur mysql --password``
 
 Exercice : démarer un conteneur à partir de l'image ubuntu et puis installer java et exécuter un programme simple. 
  
+ 
+ ``docker run -it ubuntu bash``  
 
 
   
