@@ -34,6 +34,8 @@ Solution : ``docker run --name monserveur -e MYSQL_ROOT_PASSWORD=root -d mysql``
 
 Pour lancer mysql : ``docker exec -ti monserveur mysql --password``
 
+
+Exercice : démarer un conteneur à partir de l'image ubuntu et puis installer java et exécuter un programme simple. 
  
 
 
