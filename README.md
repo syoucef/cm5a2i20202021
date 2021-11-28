@@ -126,7 +126,7 @@ Gestion des variables d'environnement :
  2. Dockerfile 
 
  a. Créer un fichier ``Dockerfile``
- b. On part d'une image existente (la plus petite est alpine), copier éventuellemnet un programme et l'exécuter ....
+ b. On part d'une image existante (la plus petite est alpine), copier éventuellement un programme et l'exécuter ....
   
   Exemple
   
@@ -157,7 +157,7 @@ CMD ["python", "test.py"]
  
  FROM : permet de définir l'image source 
  
- CMD : la commande par défautt lors de l'exécution du conteneur 
+ CMD : la commande par défaut lors de l'exécution du conteneur 
  
  EXPOSE : permet de définir le port d'écoute par défaut 
  
@@ -191,7 +191,65 @@ EXPOSE 80
 Pour chercher une image par ligne de commande ``docker serach nom_image``
 
 
-**Exercice** : publier une image de votre application Spring-boot (utiliser une base de données MySQL pour la persistence des données)
+**Exercice** : publier une image de votre application Spring-boot (utiliser une base de données MySQL pour la persistance des données)
+
+**Solution** : L'objectif de cette exercice est de vous montrer comment lier deux conteneur. Autrement dit, si un conteneur c1 a besoin d'un conteneur c2, comment peut-on l'exprimer ? 
+
+On commence d'abord par développer une application Spring-Boot (ce n'est pas le code en soit qui est important). Partant par exemple d'une API Rest simple, en utilisant Spring Data Repository, JPA, MySQL et Spring Web.  L'API permet de gérer un ensemble de produit (elle est constitué d'une unique classe appelée ``Produit``). On définit l'interface ``Poruitinterface`` qui hérita de la classe ``JpaRepository``. Le code cette interface est donnée par le code suivant : 
+
+
+```java 
+@Repository
+public interface Poruitinterface extends JpaRepository<Produit, Integer> {}
+```
+
+La classe ``Produit``est définie comme suit :
+
+```java
+
+@Entity
+public class Produit {
+    @Id
+    private int identifiant;
+    private String designation;
+    private double prix;
+    
+    // n'oubliez pas de générer un constructeur sans paramètre, des getters et setters ou utilisez Loombok
+    
+```
+
+Le fichier de configuration (``application.properties``) est donné ci-après : 
+
+```java
+#spring.datasource.url=jdbc:mysql://localhost:8889/produitsdocker?serverTimezone=UTC
+# pour docker ....
+spring.datasource.url=jdbc:mysql://nomconteneurmysql:3306/produitsdocker
+spring.datasource.username=root
+spring.datasource.password=root
+#spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=create
+```
+
+Comme vous pouvez le remarque la valeur de ``spring.datasource.url``est ``jdbc:mysql://nomconteneurmysql:3306/produitsdocker``, où ``nomconteneurmysql``fait référence tout simplement au conteneur (``hostname``) qui empaquette ``MySQL``, sans oublier les variables d'environnements  ``username=root`` et ``password=root`` (vous pouvez bien sûr les changer).  Notre application aura donc besoin du conteneur ``nomconteneurmysql``que nous pouvons lancer comme suit : 
+
+``docker run --name nomconteneurmysql -d -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=produitsdocker  -e MYSQL_PASSWORD=root  mysql``
+
+Nous avons à présent un conteneur qui peut être utilisé notre API Rest. Il nous reste qu'à l'empaqueter. Pour cela (les étapes sont décrites précédemment). Le contenu du fichier Dockerfile est : 
+
+
+```Dockerfile  
+#spring.datasource.url=jdbc:mysql://localhost:8889/produitsdocker?serverTimezone=UTC
+# pour docker ....
+spring.datasource.url=jdbc:mysql://nomconteneurmysql:3306/produitsdocker
+spring.datasource.username=root
+spring.datasource.password=root
+#spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.hibernate.ddl-auto=create
+```
+
+Pour le lancer : ``docker run -p 8181:8080 --link nomconteneurmysql: nomconteneurmysql  -d webspring``
+
+
 
  
  
