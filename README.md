@@ -191,7 +191,7 @@ EXPOSE 80
 Pour chercher une image par ligne de commande ``docker serach nom_image``
 
 
-Exercice : publier une image de votre application Spring (utiliser une base de données H2)
+**Exercice** : publier une image de votre application Spring-boot (utiliser une base de données MySQL pour la persistence des données)
 
  
  
