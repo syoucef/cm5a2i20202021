@@ -381,7 +381,13 @@ Pour trier les documents on utilise la fonction ``sort``. Pour afficher les rest
 
 ``db.restaurants.find().sort({"name":1})``. Valeur 1 pour un ordre croissant et -1 pour un ordre décroissant. 
 
-Si on veut afficher tous les restaurants du quartier par exemple ``manathan`` : ``db.restaurants.find({"borough": "Manhattan"})`. `
+Si on veut afficher tous les restaurants du quartier par exemple ``manathan`` : ``db.restaurants.find({"borough": "Manhattan"})``.
+
+
+``db.getCollection('restaurants').find({"borough" : "Manhattan",  "cuisine" : "Italian", "address.street" : "3 Avenue", "name" : /capri/i }).count()``
+
+#### Projection 
+
 
 
 #### Création d'une séquence d'opérations
