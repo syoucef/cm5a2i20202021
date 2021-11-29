@@ -386,6 +386,8 @@ Si on veut afficher tous les restaurants du quartier par exemple ``manathan`` : 
 
 ``db.getCollection('restaurants').find({"borough" : "Manhattan",  "cuisine" : "Italian", "address.street" : "3 Avenue", "name" : /capri/i }).count()``
 
+db.getCollection('restaurants').find({"borough" : "Manhattan",  "cuisine" : "Italian", "address.street" : "3 Avenue"}, {"name":1, "grades.score":1,  "_id":0}).sort({"name":-1})`` 
+
 #### Projection 
 
 
