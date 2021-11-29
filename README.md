@@ -198,6 +198,8 @@ Pour chercher une image par ligne de commande ``docker serach nom_image``
 On commence d'abord par développer une application Spring-Boot (ce n'est pas le code en soit qui est important). Partant par exemple d'une API Rest simple, en utilisant Spring Data Repository, JPA, MySQL et Spring Web.  L'API permet de gérer un ensemble de produit (elle est constitué d'une unique classe appelée ``Produit``). On définit l'interface ``Poruitinterface`` qui hérita de la classe ``JpaRepository``. Le code cette interface est donnée par le code suivant : 
 
 
+**Remarque** Pour développer une API Rest, vous avez trois possibilités : (i) utiliser les annotations JAX-RS, (ii) utiliser les annotations de RestController ou (iii) utiliser Spring Data Rest (c'est la solution la plus aboutie, dans le sens où vous n'auriez pas à réimplémenter les méthodes génértiques de toute API Rest telles que GetById, GetAll, etc.). 
+
 ```java 
 @Repository
 public interface Poruitinterface extends JpaRepository<Produit, Integer> {}
