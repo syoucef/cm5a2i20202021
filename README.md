@@ -363,7 +363,25 @@ Une fois les restaurants importés dans une base de données ``restaurants``, vo
 
 
 
-#### Filtrage et projection avec un motif JSON
+#### Filtrage et projection avec un motif JSON 
+
+Commençons par parcourir toute une collection. On utilise la fonction ``find()``sans argument. 
+
+``db.restaurants.find()``
+
+Pour compter le nombre de document, on utilise la fonction ``count()``. 
+
+``db.resraurants.find().count()`` 
+
+Comme pour SQL, on peut utiliser la pagination. L'exemple suivant affiche  15 documents en ignorant les 10 premiers. 
+
+``db.restaurants.find().skip(10).limit(115)``
+
+Pour trier les documents on utilise la fonction ``sort``. Pour afficher les restaurant par nom croissant. 
+
+``db.restaurants.find().sort({"name":1})``. Valeur 1 pour un ordre croissant et -1 pour un ordre décroissant. 
+
+Si on veut afficher tous les restaurants du quartier par exemple ``manathan`` : ``db.restaurants.find({"borough": "Manhattan"})`. `
 
 
 #### Création d'une séquence d'opérations
