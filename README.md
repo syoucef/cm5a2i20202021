@@ -239,6 +239,16 @@ Comme vous pouvez le remarque la valeur de ``spring.datasource.url``est ``jdbc:m
 Nous avons à présent un conteneur qui peut être utilisé notre API Rest. Il nous reste qu'à l'empaqueter. Pour cela (les étapes sont décrites précédemment). Le contenu du fichier Dockerfile est : 
 
 
+```Dockerfile
+FROM openjdk:8
+ADD target/test.jar test.jar
+CMD ["java", "-jar", "test"]
+EXPOSE 8080
+```
+
+Pour créer une image dont le nom est ``spring29novembre``: `` docker build -t spring29novembre``. A ce stade, on l'image  ``spring29novembre``. 
+
+
 ```Dockerfile  
 #spring.datasource.url=jdbc:mysql://localhost:8889/produitsdocker?serverTimezone=UTC
 # pour docker ....
