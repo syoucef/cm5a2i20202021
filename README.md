@@ -236,7 +236,10 @@ Comme vous pouvez le remarque la valeur de ``spring.datasource.url``est ``jdbc:m
 
 ``docker run --name nomconteneurmysql -d -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=produitsdocker  -e MYSQL_PASSWORD=root  mysql``
 
-Nous avons à présent un conteneur qui peut être utilisé notre API Rest. Il nous reste qu'à l'empaqueter. Pour cela (les étapes sont décrites précédemment). Le contenu du fichier Dockerfile est : 
+Pour vérifier que la  base de données ``produitsdocker`` est créee, on se connecte au conteneur : `` docker exec -ti nomconteneurmysql  mysql -uroot -proot``. 
+
+
+Nous avons à présent un conteneur qui peut être utilisé par notre API Rest. Il nous reste qu'à l'empaqueter. Pour cela (les étapes sont décrites précédemment). Le contenu du fichier Dockerfile est : 
 
 
 ```Dockerfile
@@ -259,7 +262,7 @@ spring.datasource.password=root
 spring.jpa.hibernate.ddl-auto=create
 ```
 
-Pour le lancer : ``docker run -p 8181:8080 --link nomconteneurmysql: nomconteneurmysql  -d webspring``
+Pour le lancer : ``docker run -p 8181:8080 --link nomconteneurmysql:nomconteneurmysql  -d webspring``
 
 ---
 ---
